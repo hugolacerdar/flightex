@@ -4,7 +4,6 @@ defmodule Flightex.Bookings.BookingTest do
   import Flightex.Factory
 
   alias Flightex.Bookings.Booking
-  alias Flightex.Users.User
 
   describe "build/2" do
     test "should build a booking when params are valid" do
