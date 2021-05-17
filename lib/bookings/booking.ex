@@ -9,7 +9,7 @@ defmodule Flightex.Bookings.Booking do
   def build(%User{id: user_id}, date, origin_city, destination_city) do
     id = UUID.uuid4()
 
-    {:ok, naive_dt} = NaiveDateTime.from_iso8601(date)
+    naive_dt = NaiveDateTime.from_iso8601!(date)
 
     {:ok,
      %__MODULE__{
