@@ -9,7 +9,7 @@ defmodule Flightex.Bookings.Agent do
 
   def save(%Booking{} = booking), do: Agent.update(__MODULE__, &update_state(&1, booking))
 
-  def get_all, do: Agent.get(__MODULE__, & &1)
+  def get_all, do: Agent.get(__MODULE__, &{:ok, &1})
 
   def get(id), do: Agent.get(__MODULE__, &get_user(&1, id))
 
